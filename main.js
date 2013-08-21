@@ -100,6 +100,51 @@ run = function() {
 		console.log($("#jsongen"))
 		$("#jsongen").val("\""+JSONClean(makeJSON())+"\"")
 	})
+	$("#jsongen").click(function() {
+		$("#jsongen").val("\""+JSONClean(makeJSON())+"\"")
+		$("#jsongen").select()
+	})
+	$(document).keydown(function(e) {
+		cont = ""
+		switch(e.keyCode) {
+		case 37:
+			$("#tleft").click()
+			return
+		case 39:
+			$("#tright").click()
+			return
+		case 69:
+			cont = "emitter"
+			break
+		case 77:
+			cont = "mirror"
+			break
+		case 78:
+			cont = "nub"
+			break
+		case 79:
+			cont = "oneway"
+			break
+		case 80:
+			cont = "prism"
+			break
+		case 82:
+			cont = "receiver"
+			break
+		case 87:
+			cont = "wall"
+			break
+		default:
+			return
+		}
+			
+		
+		
+		var d = new Date()
+		active.html("<img src='"+cont+".svg' id='"+d.getTime()+"' class='active'></img>")
+		active.attr("content",cont)
+	})
+		
 
 }
 function theta(obj) {
