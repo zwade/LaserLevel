@@ -20,6 +20,13 @@
 #head {
 	margin: 30px;
 }
+#generate {
+	position:absolute;
+	right:0px;
+	top:100px;
+	background: #ccc;
+	width:200px;
+}
 #sidebar {
 	position:absolute;
 	left:0px;
@@ -54,11 +61,14 @@
 #sidecont {
 	margin: 20px;
 }
-#shead {
+#shead, #jsonstuff {
 	padding:20px;
 	font-size:22px;
 }
 .active {
 	width: 41px;
 	height: 41px;
+}
+textarea {
+	min-height: 400px;
 }
