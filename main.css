@@ -27,16 +27,29 @@
 	background: #ccc;
 	width:200px;
 }
+.sideaction {
+	width:40px;
+	height:40px;
+	border: 1px solid black;
+	display: inline-block;
+	background-color: #fff;
+	margin: 10px;
+	background-size:100%;
+}
 .sideimage {
 	width:40px;
 	height:40px;
 	border: 1px solid black;
 	display: inline-block;
-	background: #fff;
-	margin: 10px
+	background-color: #fff;
+	margin: 10px;
+	background-size:100%;
+}
+.sideaction:active {
+	background-color: #aaa;
 }
 .sideimage:active {
-	background: #aaa;
+	background-color: #aaa;
 }
 #sidecont {
 	margin: 20px;
