@@ -45,3 +45,7 @@
 	padding:20px;
 	font-size:22px;
 }
+.active {
+	width: 41px;
+	height: 41px;
+}

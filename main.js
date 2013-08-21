@@ -28,7 +28,7 @@ run = function() {
 	}
 	s = $("#sidecont")
 	for (var i = 0; i < listOfImages.length; i++) {
-		s.append("<div id='side-"+listOfImages[i]+"' class='sideimage' style='background-image: url(\""+listOfImages[i]+".svg\")'></div>")
+		s.append("<div content='"+listOfImages[i]+"' id='side-"+listOfImages[i]+"' class='sideimage' style='background-image: url(\""+listOfImages[i]+".svg\")'></div>")
 		if (i%2==1) {
 			s.append("<br>")
 		}
@@ -37,6 +37,14 @@ run = function() {
 		$(".cell").css("background","#06f")
 		$(this).css("background","#59f")
 		active = $(this)
+	})
+	$(".sideimage").click(function(obj) {
+		if (!active) {
+			return
+		}
+		var d = new Date()
+		active.html("<img src='"+$(this).attr('content')+".svg' id='"+d.getTime()+"' class='active'></img>")
+		active.attr("content",$(this).attr('content'))
 	})
 }
 
