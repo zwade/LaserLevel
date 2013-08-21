@@ -49,6 +49,8 @@ run = function() {
 	s.append("<div class='sideaction' style='background-image: url(\"right.png\")' id='tright'></div>")
 	s.append('<br>')
 	s.append("<div class='sideaction' style='background-image: url(\"delete.png\")' id='tdel'></div>")
+	s.append('<br>')
+	s.append("<div id='sideinfo'><span><b>(M)</b>irror</span><br> <span><b>(O)</b>neway</span><br> <span><b>(P)</b>rism</span><br> <span><b>(W)</b>all</span><br> <span><b>(R)</b>eceiver</span><br> <span><b>(N)</b>ub</span><br> <span><b>(E)</b>mitter</span><br> <span><b>(Left)</b></span><br> <span><b>(Right)</b></span><br> <span><b>(Backspace)</b></span><br></div>")
 
 	$(".cell").click(function(obj) {
 		$(".cell").css("background","#06f")
@@ -107,6 +109,9 @@ run = function() {
 	$(document).keydown(function(e) {
 		cont = ""
 		switch(e.keyCode) {
+		case 8:
+			$("#tdel").click()
+			return
 		case 37:
 			$("#tleft").click()
 			return
