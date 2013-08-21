@@ -1,0 +1,47 @@
+.cell {
+	width: 40px;
+	height: 40px;
+	border: 1px solid black;
+	display: inline-block;
+	background: #06f;
+}
+#field {
+	display: inline-block;
+}
+#main {
+	text-align: center;
+}
+#lle {
+	text-align: center;
+	font-size:30px;
+	font-weight: bold;
+
+}
+#head {
+	margin: 30px;
+}
+#sidebar {
+	position:absolute;
+	left:0px;
+	top:100px;
+	background: #ccc;
+	width:200px;
+}
+.sideimage {
+	width:40px;
+	height:40px;
+	border: 1px solid black;
+	display: inline-block;
+	background: #fff;
+	margin: 10px
+}
+.sideimage:active {
+	background: #aaa;
+}
+#sidecont {
+	margin: 20px;
+}
+#shead {
+	padding:20px;
+	font-size:22px;
+}
